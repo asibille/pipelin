@@ -1,0 +1,16 @@
+name: Test Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run script JS
+        run: |
+          echo "Hello depuis GitHub Actions 🚀"
+          node -v
